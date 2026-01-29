@@ -81,6 +81,24 @@
 
 论文使用了三类主流公开数据集（Oxford、NASA、CALCE）对模型进行验证。这些数据集涵盖了不同的正极材料（LCO、NCA、NCO-LCO）和不同的运行工况。
 
+### 表1 三种电池数据集的详细描述
+
+| **数据来源 (Data Sources)** | Oxford | NASA | CALCE |
+| :--- | :--- | :--- | :--- |
+| **制造商 (Manufacturer)** | Kokam | LG Chem | LG Chem |
+| **电池类型 (Cell types)** | Pouch (软包) | 18650 Cylindrical (18650圆柱) | Prismatic (方形) |
+| **正极材料 (Cathode material)** | NCO-LCO | NCA | LCO |
+| **选定电池系列 (Selected battery series)** | Cell (1–8) | B00 (05–07 and 18) | CS2 (35–38) |
+| **电池数量 (Battery number)** | 8 | 4 | 4 |
+| **额定容量 (Rated capacity, Ah)** | 0.74 | 2 | 1.1 |
+| **失效阈值 (Capacity failure threshold)** | 70% | 1.4 Ah (70%) | 0.84 Ah (76.4%) |
+| **充电协议 (Charge protocol)** | CC (2C) | CC-CV (0.75C, 4.2V) | CC-CV (0.5C, 4.2V) |
+| **放电协议 (Discharge protocol)** | Variance (工况变化) | CC (1C) | CC (1C) |
+| **截止电压 (Cut-off voltage, V)** | 充电至 4.2, 放电至 2.7 | 充电至 4.2, 放电至 2.7/2.5/2.2/2.5 | 充电至 4.2, 放电至 2.7 |
+| **截止电流 (Cut-off current, A)** | – | 充电至 0.02 | 充电至 0.05 |
+| **实验温度 (Experiment temperature, °C)** | 40 | 24 | 24 |
+| **循环次数 (Cycle numbers)** | 8200/7700/8100/5100/ 5000/5000/8100/8100 | 168/168/168/132 | 881/935/971/995 |
+
 #### 4.1 准确性对比
 在与 LSTM、Transformer、CNN-LSTM、CNN-Transformer 等模型的对比实验中，BMSFormer 在所有测试电池上均表现出更低的 MAE（平均绝对误差）和 RMSE（均方根误差）。即便在电池 SOH 出现剧烈波动的情况下，该预测曲线仍能紧密贴合真实值。
 
