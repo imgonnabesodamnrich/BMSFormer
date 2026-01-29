@@ -66,7 +66,6 @@
 *   **特征捕捉**：通过 ReLU 激活函数增强特征的表达能力，使其既能关注长期的容量衰减趋势（全局），也能敏感捕捉到容量再生或突发波动（局部）。
 
 #### 3.2 深度可分离卷积模块 (DSConv)
-<img width="1562" height="677" alt="image"  />
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6f4b5029-f7e9-48a0-955e-eab65437577c" width="80%" />
