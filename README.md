@@ -47,7 +47,7 @@
 ### 3. BMSFormer 模型架构设计
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/b3e181a2-ec04-41d4-a0c6-3010abd4a78b" width="80%" />
+  <img src="https://github.com/user-attachments/assets/0b8260ba-96a6-4909-b698-c41b2bd6e7aa" />
   <p><em>图1 BMSFormer 框架 (a) LGFA 模块 (b) BMSFormer 块 (c) DSConv-L 模块 (d) BMSFormer 核心结构</em></p>
 </div>
 
@@ -56,7 +56,7 @@
 #### 3.1 局部-全局融合注意力机制 (LGFA)
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/8f2d9497-3296-4f2f-bef9-331156b00912" width="80%" />
+  <img src="https://github.com/user-attachments/assets/181512b0-88ce-4ccc-9eae-ef28f092aba5" width="80%" />
   <p><em>图2 (a) 传统 Softmax 注意力机制 (b) 传统线性注意力机制与 (c) 所提出的局部-全局融合注意力模块之间的区别</em></p>
 </div>
 传统的自注意力机制（Softmax-based Attention）计算量随输入序列长度 N 的增长呈平方级增加。BMSFormer 采用了一种局部-全局融合注意力模块：
@@ -66,9 +66,10 @@
 *   **特征捕捉**：通过 ReLU 激活函数增强特征的表达能力，使其既能关注长期的容量衰减趋势（全局），也能敏感捕捉到容量再生或突发波动（局部）。
 
 #### 3.2 深度可分离卷积模块 (DSConv)
+<img width="1562" height="677" alt="image"  />
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/042411a8-0acf-42fe-a076-85704a234674" width="80%" />
+  <img src="https://github.com/user-attachments/assets/6f4b5029-f7e9-48a0-955e-eab65437577c" width="80%" />
   <p><em>图3 (a) 标准卷积 (b) 标准深度可分离卷积 (c) DSConv-S 模块 (d) DSConv-L 模块的基本结构</em></p>
 </div>
 模型中嵌入了两种不同倍数的深度可分离卷积：DSConv-S（小核）和 DSConv-L（大核）。
